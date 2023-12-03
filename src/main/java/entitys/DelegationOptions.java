@@ -1,6 +1,6 @@
 package entitys;
 
-public class DelegationsOptions {
+public class DelegationOptions {
 	
 	
 	private long userId; 
@@ -12,7 +12,7 @@ public class DelegationsOptions {
 	
 	
 	
-	public DelegationsOptions() {
+	public DelegationOptions() {
 		super();
 	}
 	

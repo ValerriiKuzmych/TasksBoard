@@ -6,7 +6,7 @@ public class User {
 	
 	private long userId;
 	private String userName;
-	private DelegationsOptions delegationsOptions;
+	private DelegationOptions delegationsOptions;
 	private List<Task> tasksList;
 	private List<TaskBoard> taskBoardList;
 	
@@ -42,13 +42,13 @@ public class User {
 
 
 
-	public DelegationsOptions getDelegationsOptions() {
+	public DelegationOptions getDelegationsOptions() {
 		return delegationsOptions;
 	}
 
 
 
-	public void setDelegationsOptions(DelegationsOptions delegationsOptions) {
+	public void setDelegationsOptions(DelegationOptions delegationsOptions) {
 		this.delegationsOptions = delegationsOptions;
 	}
 
