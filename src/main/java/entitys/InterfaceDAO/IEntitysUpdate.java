@@ -1,5 +1,7 @@
 package entitys.InterfaceDAO;
 
-public interface IEntitysUpdate {
+public interface IEntitysUpdate<T> {
+	
+	 T update(T t);
 
 }

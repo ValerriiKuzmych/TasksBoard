@@ -1,5 +1,7 @@
 package entitys.InterfaceDAO;
 
-public interface IUserDAO extends IEntitysAdd, IEntitysDelete, IEntitysFindById, IEntitysSave{
+import entitys.User;
+
+public interface IUserDAO extends IEntitysAdd<User>, IEntitysDelete, IEntitysFindById<User>{
 
 }

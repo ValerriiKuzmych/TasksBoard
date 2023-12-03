@@ -1,5 +1,7 @@
 package entitys.InterfaceDAO;
 
-public interface ITaskBoardDAO extends IEntitysAdd, IEntitysDelete, IEntitysFindById, IEntitysSave {
+import entitys.TaskBoard;
+
+public interface ITaskBoardDAO extends IEntitysAdd<TaskBoard>, IEntitysDelete, IEntitysFindById<TaskBoard> {
 
 }

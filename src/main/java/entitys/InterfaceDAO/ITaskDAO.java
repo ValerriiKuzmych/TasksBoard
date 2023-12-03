@@ -1,5 +1,7 @@
 package entitys.InterfaceDAO;
 
-public interface ITaskDAO extends IEntitysAdd, IEntitysDelete, IEntitysFindById, IEntitysSave{
+import entitys.Task;
+
+public interface ITaskDAO extends IEntitysAdd<Task>, IEntitysDelete, IEntitysFindById<Task>{
 
 }

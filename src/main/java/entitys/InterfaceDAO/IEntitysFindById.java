@@ -1,5 +1,7 @@
 package entitys.InterfaceDAO;
 
-public interface IEntitysFindById {
+public interface IEntitysFindById<T> {
+	
+	  T findById(long id);
 
 }

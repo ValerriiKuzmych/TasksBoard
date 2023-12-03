@@ -1,5 +1,7 @@
 package entitys.InterfaceDAO;
 
-public interface IAdministratorDAO extends IEntitysAdd, IEntitysDelete, IEntitysFindById, IEntitysSave {
+import entitys.Administrator;
+
+public interface IAdministratorDAO extends IEntitysAdd<Administrator>, IEntitysDelete, IEntitysFindById<Administrator>{
 
 }
