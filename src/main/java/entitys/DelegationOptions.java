@@ -1,5 +1,8 @@
 package entitys;
 
+
+
+
 public class DelegationOptions {
 	
 	

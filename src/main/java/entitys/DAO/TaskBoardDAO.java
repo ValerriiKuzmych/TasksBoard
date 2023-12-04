@@ -23,4 +23,10 @@ public class TaskBoardDAO implements ITaskBoardDAO{
 		return null;
 	}
 
+	@Override
+	public void entityArchiving(long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

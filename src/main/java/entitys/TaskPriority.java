@@ -1,8 +1,10 @@
 package entitys;
 
+
+
 public class TaskPriority {
 	
-	
+
 	private long taskId;
 	private boolean lowPriority;
 	private boolean mediumPriority;
