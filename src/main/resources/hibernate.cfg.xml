@@ -8,14 +8,13 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/eclipseAppTasksboard</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">root</property>
-
       <!--    JDBC connection pool settings 
         <property name="hibernate.c3p0.min_size">5</property>
         <property name="hibernate.c3p0.max_size">20</property>
         Other properties...
  -->
         <!-- Specify dialect -->
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
         <!-- Echo all executed statements to stdout -->
         <property name="hibernate.show_sql">true</property>
@@ -24,7 +23,7 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Mention annotated classes -->
-        <mapping class="com.example.Person"/>
+        <mapping class="entitys.User"/>
         <!-- Other mappings... -->
 
     </session-factory>
