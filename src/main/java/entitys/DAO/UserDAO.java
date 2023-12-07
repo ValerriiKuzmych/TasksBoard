@@ -6,7 +6,6 @@ import entitys.User;
 
 import eclipseTasksBoard.HibernateUtil;
 //import eclipseTasksBoard.TransactionManager;
-import entitys.User;
 import entitys.InterfaceDAO.IUserDAO;
 
 public class UserDAO implements IUserDAO {
@@ -47,8 +46,24 @@ public class UserDAO implements IUserDAO {
 
 	@Override
 	public User findById(long id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	    try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+	        Transaction transaction = null;
 
+	        try {
+	            transaction = session.beginTransaction();
+
+	            // Retrieve the user by id
+	            User user = session.get(User.class, id);
+
+	            transaction.commit();
+
+	            return user;
+	        } catch (Exception e) {
+	            if (transaction != null) {
+	                transaction.rollback();
+	            }
+	            throw e;  // Re-throw the exception after rolling back the transaction
+	        }
+	    }
+	}
 }

@@ -18,9 +18,10 @@ public class User {
     private long userId;
     
     
-    private String userName;
+    private String firstName;
+    private String lastName;
     
-//	private DelegationOptions delegationsOptions;
+ // private DelegationOptions delegationsOptions;
 //	private List<Task> tasksList;
 //	private List<TaskBoard> taskBoardList;
 	
@@ -44,15 +45,38 @@ public class User {
 
 
 
-	public String getUserName() {
-		return userName;
+	public String getLastName() {
+		return lastName;
 	}
 
 
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
+
+
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + "]";
+	}
+
+
+
+
 
 
 
