@@ -1,31 +1,53 @@
 package entitys;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
-
-
-public class DelegationOptions {
+@Entity(name = "options_delegation")
+public class OptionsDelegation {
 	
-	
-	private long userId; 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id; 
 	private boolean taskBoard;
 	private boolean taskBoardOptions;
 	private boolean taskPriority;
 	private boolean taskStatus;
 	private boolean taskOptions;
+	 
+    @OneToOne(cascade = CascadeType.ALL)
+	private User user;
 	
 	
 	
-	public DelegationOptions() {
-		super();
+	
+	public User getUser() {
+		return user;
+	}
+
+
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
+
+	public OptionsDelegation() {
+		
 	}
 	
 	
 	
-	public long getUserId() {
-		return userId;
+	public long getId() {
+		return id;
 	}
-	public void setUserId(long userId) {
-		this.userId = userId;
+	public void setId(long id) {
+		this.id = id;
 	}
 	public boolean isTaskBoard() {
 		return taskBoard;

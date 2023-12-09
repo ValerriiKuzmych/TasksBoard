@@ -2,12 +2,16 @@ package entitys;
 
 
 
+import javax.persistence.CascadeType;
+
 //import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity(name = "users")
 
@@ -21,7 +25,10 @@ public class User {
     private String firstName;
     private String lastName;
     
- // private DelegationOptions delegationsOptions;
+    
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "options_delegation_id")
+    private OptionsDelegation optionsDelegation;
 //	private List<Task> tasksList;
 //	private List<TaskBoard> taskBoardList;
 	
@@ -76,19 +83,22 @@ public class User {
 
 
 
+	public OptionsDelegation getOptionsDelegations() {
+		return optionsDelegation;
+	}
+
+
+
+	public void setOptionsDelegations(OptionsDelegation optionsDelegations) {
+		this.optionsDelegation = optionsDelegations;
+	}
 
 
 
 
-//	public DelegationOptions getDelegationsOptions() {
-//		return delegationsOptions;
-//	}
-//
-//
-//
-//	public void setDelegationsOptions(DelegationOptions delegationsOptions) {
-//		this.delegationsOptions = delegationsOptions;
-//	}
+
+
+
 //
 //
 //

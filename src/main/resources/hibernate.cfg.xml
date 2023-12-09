@@ -24,6 +24,7 @@
 
         <!-- Mention annotated classes -->
         <mapping class="entitys.User"/>
+        <mapping class="entitys.OptionsDelegation"/>
         <!-- Other mappings... -->
 
     </session-factory>
