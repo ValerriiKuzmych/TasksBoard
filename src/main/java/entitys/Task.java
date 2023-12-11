@@ -1,11 +1,16 @@
 package entitys;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 
 @Entity
+(name = "tasks")
 public class Task {
 	
 	
@@ -13,13 +18,16 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long taskId;
 	
-	private long userId;
-	
-	private long adminId;
+	 @ManyToOne
+	 @JoinColumn(name = "user_id")
+	private User user;
+
+//	private long adminId;
 	
 	private String taskStatus;
 	
 	private String taskPriority;
+	
 	
 	
 
@@ -27,7 +35,15 @@ public class Task {
 		super();
 	}
 	
-	
+	public User getUser() {
+		return user;
+	}
+
+
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 
 	public long getTaskId() {
 		return taskId;
@@ -37,21 +53,7 @@ public class Task {
 		this.taskId = taskId;
 	}
 
-	public long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(long userId) {
-		this.userId = userId;
-	}
-
-	public long getAdminId() {
-		return adminId;
-	}
-
-	public void setAdminId(long adminId) {
-		this.adminId = adminId;
-	}
+	
 
 	public String getTaskStatus() {
 		return taskStatus;

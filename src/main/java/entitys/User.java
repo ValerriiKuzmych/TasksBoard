@@ -2,6 +2,8 @@ package entitys;
 
 
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 
 //import java.util.List;
@@ -11,6 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity(name = "users")
@@ -29,7 +32,9 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "options_delegation_id")
     private OptionsDelegation optionsDelegation;
-//	private List<Task> tasksList;
+    
+    @OneToMany(cascade = CascadeType.ALL)
+	private List<Task> tasksList;
 //	private List<TaskBoard> taskBoardList;
 	
 	
@@ -99,18 +104,18 @@ public class User {
 
 
 
-//
-//
-//
-//	public List<Task> getTasksList() {
-//		return tasksList;
-//	}
-//
-//
-//
-//	public void setTasksList(List<Task> tasksList) {
-//		this.tasksList = tasksList;
-//	}
+
+
+
+	public List<Task> getTasksList() {
+		return tasksList;
+	}
+
+
+
+	public void setTasksList(List<Task> tasksList) {
+		this.tasksList = tasksList;
+	}
 //
 //
 //

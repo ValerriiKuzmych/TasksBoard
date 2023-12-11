@@ -18,8 +18,8 @@ public class OptionsDelegation {
 	private boolean taskPriority;
 	private boolean taskStatus;
 	private boolean taskOptions;
-	 
-    @OneToOne(cascade = CascadeType.ALL)
+	
+	@OneToOne(cascade = CascadeType.ALL)
 	private User user;
 	
 	
