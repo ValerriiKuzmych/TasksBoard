@@ -2,31 +2,30 @@
         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 
-    <session-factory>
-        <!-- Database connection settings -->
-        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/eclipseAppTasksboard</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">root</property>
-      <!--    JDBC connection pool settings 
-        <property name="hibernate.c3p0.min_size">5</property>
-        <property name="hibernate.c3p0.max_size">20</property>
-        Other properties...
- -->
-        <!-- Specify dialect -->
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/eclipseAppTasksboard</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		<!-- JDBC connection pool settings <property name="hibernate.c3p0.min_size">5</property> 
+			<property name="hibernate.c3p0.max_size">20</property> Other properties... -->
+		<!-- Specify dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
-        <!-- Echo all executed statements to stdout -->
-        <property name="hibernate.show_sql">true</property>
+		<!-- Echo all executed statements to stdout -->
+		<property name="hibernate.show_sql">true</property>
 
-        <!-- Drop and re-create the database schema on startup -->
-        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hibernate.hbm2ddl.auto">create-drop</property>
 
-        <!-- Mention annotated classes -->
-        <mapping class="entitys.User"/>
-        <mapping class="entitys.OptionsDelegation"/>
-         <mapping class="entitys.Task"/>
-        <!-- Other mappings... -->
+		<!-- Mention annotated classes -->
+		<mapping class="entitys.User" />
+		<mapping class="entitys.OptionsDelegation" />
+		<mapping class="entitys.Task" />
+		<mapping class="entitys.TaskBoard" />
 
-    </session-factory>
+		<!-- Other mappings... -->
+
+	</session-factory>
 </hibernate-configuration>

@@ -7,11 +7,14 @@ import java.util.ArrayList;
 
 import entitys.OptionsDelegation;
 import entitys.Task;
+import entitys.TaskBoard;
 
 public class Main {
 	
 	public static void main(String[] args) {
 		
+		TaskBoard taskBoard =  new TaskBoard();
+		ArrayList<User> taskBoardUsers = new ArrayList<>();
 		
 		User user = new User();
 		OptionsDelegation optionDelegationUser = new OptionsDelegation();
@@ -50,15 +53,33 @@ public class Main {
 		task2.setUser(user1);
 		user1.setOptionsDelegations(optionDelegationUser1);
 		
+		
+		
 		ArrayList<Task> tasks1 =  new ArrayList<>();
 		tasks1.add(task1);
 		tasks1.add(task2);
 		user1.setTasksList(tasks1);
 		
 		
+		taskBoardUsers.add(user);
+		taskBoardUsers.add(user1);
+		
+		ArrayList<TaskBoard> usersTasksBoards = new ArrayList<>();
+		
+		taskBoard.setUsersList(taskBoardUsers);
+		
+		
+		usersTasksBoards.add(taskBoard);
+		
+		user.setTasksBoardsList(usersTasksBoards);
+		user1.setTasksBoardsList(usersTasksBoards);
+		
+		
 		
 		
 		UserDAO userDAO = new UserDAO();
+		
+		
 		
 		
 		
