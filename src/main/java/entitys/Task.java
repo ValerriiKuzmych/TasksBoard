@@ -1,6 +1,7 @@
 package entitys;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,6 +22,13 @@ public class Task {
 	 @ManyToOne
 	 @JoinColumn(name = "user_id")
 	 private User user;
+	 
+	 @ManyToOne
+	 @JoinColumn(name = "task_board_id")
+	 private TaskBoard taskBoard;
+	 
+	 @Column(name = "task_board_id",   insertable = false, updatable = false)
+	 private long taskBoardId;
 
 //	private long adminId;
 	
@@ -69,6 +77,14 @@ public class Task {
 
 	public void setTaskPriority(String taskPriority) {
 		this.taskPriority = taskPriority;
+	}
+
+	public TaskBoard getTaskBoard() {
+		return taskBoard;
+	}
+
+	public void setTaskBoard(TaskBoard taskBoard) {
+		this.taskBoard = taskBoard;
 	}
 	
 	

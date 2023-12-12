@@ -75,7 +75,14 @@ public class Main {
 		user1.setTasksBoardsList(usersTasksBoards);
 		
 		
+		ArrayList<Task> tasksTaskBoard = new ArrayList<>();
+		tasksTaskBoard.add(task);
+		tasksTaskBoard.add(task2);
+		tasksTaskBoard.add(task);
 		
+		
+		
+	
 		
 		UserDAO userDAO = new UserDAO();
 		
@@ -85,6 +92,7 @@ public class Main {
 		
      	userDAO.add(user);
 		userDAO.add(user1);
+		taskBoard.setTasksList(tasksTaskBoard);
 		System.out.println(userDAO.findById(1)); 
 		System.out.println(userDAO.findById(2));
 		

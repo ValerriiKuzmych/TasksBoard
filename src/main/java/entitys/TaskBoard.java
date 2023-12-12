@@ -3,13 +3,16 @@ package entitys;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
+(name = "task_board")
 public class TaskBoard {
 	
 	
@@ -19,10 +22,12 @@ public class TaskBoard {
 //	private long adminId;
 	
 	@ManyToMany(mappedBy = "tasksBoardsList")
-	
 	private List<User> usersList;
-//	private List<Task> tasksList;
-//	
+	
+	@OneToMany(cascade = CascadeType.ALL)
+	
+	private List<Task> tasksList;
+	
 	
 	
 	public TaskBoard() {
@@ -49,12 +54,12 @@ public class TaskBoard {
 	public void setUsersList(List<User> usersList) {
 		this.usersList = usersList;
 	}
-//	public List<Task> getTasksList() {
-//		return tasksList;
-//	}
-//	public void setTasksList(List<Task> tasksList) {
-//		this.tasksList = tasksList;
-//	}
+	public List<Task> getTasksList() {
+		return tasksList;
+	}
+	public void setTasksList(List<Task> tasksList) {
+		this.tasksList = tasksList;
+	}
 	
 	
 	
