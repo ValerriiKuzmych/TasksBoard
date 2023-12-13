@@ -1,7 +1,6 @@
 package entitys;
 
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,14 +22,13 @@ public class Task {
 	 @JoinColumn(name = "user_id")
 	 private User user;
 	 
-	 @ManyToOne
-	 @JoinColumn(name = "task_board_id")
+	 
 	 private TasksBoard tasksBoard;
 	 
-	 @Column(name = "task_board_id",   insertable = false, updatable = false)
-	 private long taskBoardId;
-
-//	private long adminId;
+	 
+//	private long taskBoardId;
+//
+//    private long adminId;
 	
 	private String taskStatus;
 	

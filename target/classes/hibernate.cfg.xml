@@ -20,10 +20,11 @@
 		<property name="hibernate.hbm2ddl.auto">create-drop</property>
 
 		<!-- Mention annotated classes -->
-		<mapping class="entitys.User" />
+<!-- 		<mapping class="entitys.User" />
 		<mapping class="entitys.OptionsDelegation" />
-		<mapping class="entitys.Task" />
-		<mapping class="entitys.TaskBoard" />
+		<mapping class="entitys.Task" /> -->
+		<mapping class="entitys.TasksBoard" />
+		<mapping class="entitys.Administrator" />
 
 		<!-- Other mappings... -->
 

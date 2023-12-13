@@ -5,9 +5,9 @@ import org.hibernate.Transaction;
 
 import eclipseTasksBoard.HibernateUtil;
 import entitys.TasksBoard;
-import entitys.InterfaceDAO.ITaskBoardDAO;
+import entitys.InterfaceDAO.ITasksBoardDAO;
 
-public class TaskBoardDAO implements ITaskBoardDAO {
+public class TasksBoardDAO implements ITasksBoardDAO {
 
 	@Override
 	public void add(TasksBoard tasksBoard) {

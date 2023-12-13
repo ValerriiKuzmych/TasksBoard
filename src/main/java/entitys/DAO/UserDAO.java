@@ -5,7 +5,6 @@ import org.hibernate.Transaction;
 import entitys.User;
 
 import eclipseTasksBoard.HibernateUtil;
-//import eclipseTasksBoard.TransactionManager;
 import entitys.InterfaceDAO.IUserDAO;
 
 public class UserDAO implements IUserDAO {
@@ -15,17 +14,16 @@ public class UserDAO implements IUserDAO {
 		
 
 		
-		//TransactionManager.performTransaction(session -> {session.save(user);});
+		
 		
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
 	        Transaction transaction = session.beginTransaction();
 
 	        try {
-	            // Your database operations
+	           
 	            session.save(user);
 
-	            // Additional database operations
-	            // ...
+	            
 
 	            transaction.commit();
 	        } catch (Exception e) {

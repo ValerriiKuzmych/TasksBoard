@@ -1,66 +1,79 @@
 package entitys;
 
 
-import java.util.List;
 
-import javax.persistence.CascadeType;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 
-@Entity
-(name = "task_board")
+
+@Entity(name = "tasks_boards")
 public class TasksBoard {
-	
-	
+
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long taskBoardId;
+    @Column(name = "tasks_board_id")
+    private long tasksBoardId;
+	
+    @Column(name = "tasks_board_name")
+    private String tasksBoardName;
+	
+	
+	
+//	@Column (name = "administrator_id")
 //	private long adminId;
-	
-	@ManyToMany(mappedBy = "tasksBoardsList")
-	private List<User> usersList;
-	
-	@OneToMany(cascade = CascadeType.ALL)
-	private List<Task> tasksList;
-	
-	
-	
+
+
+//	private List<User> usersList;
+//
+//
+//	private List<Task> tasksList;
+
 	public TasksBoard() {
 		super();
 	}
-	
-	
-	
-	public long getTaskBoardId() {
-		return taskBoardId;
+
+	public long getTasksBoardId() {
+		return tasksBoardId;
 	}
-	public void setTaskBoardId(long taskBoardId) {
-		this.taskBoardId = taskBoardId;
+
+	public void setTasksBoardId(long taskBoardId) {
+		this.tasksBoardId = taskBoardId;
 	}
+
+//	public List<User> getUsersList() {
+//		return usersList;
+//	}
+//
+//	public void setUsersList(List<User> usersList) {
+//		this.usersList = usersList;
+//	}
+//
+//	public List<Task> getTasksList() {
+//		return tasksList;
+//	}
+//
+//	public void setTasksList(List<Task> tasksList) {
+//		this.tasksList = tasksList;
+//	}
+
 //	public long getAdminId() {
 //		return adminId;
 //	}
+//
 //	public void setAdminId(long adminId) {
 //		this.adminId = adminId;
 //	}
-	public List<User> getUsersList() {
-		return usersList;
+
+	public String getTasksBoardName() {
+		return tasksBoardName;
 	}
-	public void setUsersList(List<User> usersList) {
-		this.usersList = usersList;
+
+	public void setTasksBoardName(String tasksBoardName) {
+		this.tasksBoardName = tasksBoardName;
 	}
-	public List<Task> getTasksList() {
-		return tasksList;
-	}
-	public void setTasksList(List<Task> tasksList) {
-		this.tasksList = tasksList;
-	}
-	
-	
-	
 
 }
