@@ -1,24 +1,44 @@
 package entitys.DAO;
 
-import entitys.TaskBoard;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import eclipseTasksBoard.HibernateUtil;
+import entitys.TasksBoard;
 import entitys.InterfaceDAO.ITaskBoardDAO;
 
-public class TaskBoardDAO implements ITaskBoardDAO{
+public class TaskBoardDAO implements ITaskBoardDAO {
 
 	@Override
-	public void add(TaskBoard t) {
-		// TODO Auto-generated method stub
-		
+	public void add(TasksBoard tasksBoard) {
+
+		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+
+			Transaction transaction = session.beginTransaction();
+
+			try {
+				session.save(tasksBoard);
+
+				transaction.commit();
+			} catch (Exception e) {
+				if (transaction != null) {
+					transaction.rollback();
+				}
+
+				throw e; // Re-throw the exception after rolling back the transaction
+			}
+		}
+
 	}
 
 	@Override
 	public void delete(long id) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
-	public TaskBoard findById(long id) {
+	public TasksBoard findById(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -26,7 +46,7 @@ public class TaskBoardDAO implements ITaskBoardDAO{
 	@Override
 	public void entityArchiving(long id) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

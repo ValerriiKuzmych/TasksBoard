@@ -35,7 +35,7 @@ public class User {
 	@JoinTable(name = "users_tasks_boards",
 	joinColumns = @JoinColumn(name = "user_id"),
 	inverseJoinColumns = @JoinColumn(name = "tasks_board_id"))
-	private List<TaskBoard> tasksBoardsList;
+	private List<TasksBoard> tasksBoardsList;
 
 	public User() {
 
@@ -86,11 +86,11 @@ public class User {
 		this.tasksList = tasksList;
 	}
 
-	public List<TaskBoard> getTasksBoardsList() {
+	public List<TasksBoard> getTasksBoardsList() {
         return tasksBoardsList;
     }
 
-    public void setTasksBoardsList(List<TaskBoard> tasksBoardsList) {
+    public void setTasksBoardsList(List<TasksBoard> tasksBoardsList) {
         this.tasksBoardsList = tasksBoardsList;
     }
     

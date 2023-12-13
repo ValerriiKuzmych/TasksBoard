@@ -13,7 +13,7 @@ import javax.persistence.OneToMany;
 
 @Entity
 (name = "task_board")
-public class TaskBoard {
+public class TasksBoard {
 	
 	
 	@Id
@@ -25,12 +25,11 @@ public class TaskBoard {
 	private List<User> usersList;
 	
 	@OneToMany(cascade = CascadeType.ALL)
-	
 	private List<Task> tasksList;
 	
 	
 	
-	public TaskBoard() {
+	public TasksBoard() {
 		super();
 	}
 	

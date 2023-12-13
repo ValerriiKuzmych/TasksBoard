@@ -15,7 +15,7 @@ public class Administrator {
 	private long adminId;
 	private String userName;
 	private List<Task> tasksList;
-	private List<TaskBoard> taskBoardList;
+	private List<TasksBoard> taskBoardList;
 	
 	
 	
@@ -44,12 +44,12 @@ public class Administrator {
 	}
 
 
-	public List<TaskBoard> getTaskBoardList() {
+	public List<TasksBoard> getTaskBoardList() {
 		return taskBoardList;
 	}
 
 
-	public void setTaskBoardList(List<TaskBoard> taskBoardList) {
+	public void setTaskBoardList(List<TasksBoard> taskBoardList) {
 		this.taskBoardList = taskBoardList;
 	}
 

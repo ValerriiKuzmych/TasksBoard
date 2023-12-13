@@ -25,7 +25,7 @@ public class Task {
 	 
 	 @ManyToOne
 	 @JoinColumn(name = "task_board_id")
-	 private TaskBoard taskBoard;
+	 private TasksBoard tasksBoard;
 	 
 	 @Column(name = "task_board_id",   insertable = false, updatable = false)
 	 private long taskBoardId;
@@ -79,12 +79,12 @@ public class Task {
 		this.taskPriority = taskPriority;
 	}
 
-	public TaskBoard getTaskBoard() {
-		return taskBoard;
+	public TasksBoard getTaskBoard() {
+		return tasksBoard;
 	}
 
-	public void setTaskBoard(TaskBoard taskBoard) {
-		this.taskBoard = taskBoard;
+	public void setTaskBoard(TasksBoard tasksBoard) {
+		this.tasksBoard = tasksBoard;
 	}
 	
 	
