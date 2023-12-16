@@ -11,57 +11,72 @@ public class UserDAO implements IUserDAO {
 
 	@Override
 	public void add(User user) {
-		
 
-		
-		
-		
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-	        Transaction transaction = session.beginTransaction();
+			Transaction transaction = session.beginTransaction();
 
-	        try {
-	           
-	            session.save(user);
+			try {
 
-	            
+				session.save(user);
 
-	            transaction.commit();
-	        } catch (Exception e) {
-	            if (transaction != null) {
-	                transaction.rollback();
-	            }
-	            throw e;  // Re-throw the exception after rolling back the transaction
-	        }
-	    }
-		
+				transaction.commit();
+			} catch (Exception e) {
+				if (transaction != null) {
+					transaction.rollback();
+				}
+				throw e; // Re-throw the exception after rolling back the transaction
+			}
+		}
+
 	}
 
 	@Override
 	public void delete(long id) {
 		// TODO Auto-generated method stub
-		
+
+	}
+
+	public void update(User user) {
+
+		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+
+			Transaction transaction = session.beginTransaction();
+
+			try {
+
+				session.update(user);
+
+				transaction.commit();
+			} catch (Exception e) {
+				if (transaction != null) {
+					transaction.rollback();
+				}
+				throw e; // Re-throw the exception after rolling back the transaction
+			}
+		}
+
 	}
 
 	@Override
 	public User findById(long id) {
-	    try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-	        Transaction transaction = null;
+		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+			Transaction transaction = null;
 
-	        try {
-	            transaction = session.beginTransaction();
+			try {
+				transaction = session.beginTransaction();
 
-	            // Retrieve the user by id
-	            User user = session.get(User.class, id);
+				// Retrieve the user by id
+				User user = session.get(User.class, id);
 
-	            transaction.commit();
+				transaction.commit();
 
-	            return user;
-	        } catch (Exception e) {
-	            if (transaction != null) {
-	                transaction.rollback();
-	            }
-	            throw e;  // Re-throw the exception after rolling back the transaction
-	        }
-	    }
+				return user;
+			} catch (Exception e) {
+				if (transaction != null) {
+					transaction.rollback();
+				}
+				throw e; // Re-throw the exception after rolling back the transaction
+			}
+		}
 	}
 }

@@ -42,8 +42,8 @@ public class AdministratorDAO implements IAdministratorDAO {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	public void update(Administrator administrator) {
+	@Override
+	public void  update(Administrator administrator) {
 
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
 
