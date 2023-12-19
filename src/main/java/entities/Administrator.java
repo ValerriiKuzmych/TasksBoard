@@ -25,19 +25,21 @@ public class Administrator {
 	@OneToMany(mappedBy = "administrator", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Task> tasksList;
 
-	public List<Task> getTasksList() {
-		return tasksList;
-	}
-
-	public void setTasksList(List<Task> tasksList) {
-		this.tasksList = tasksList;
-	}
+	
 
 	@OneToMany(mappedBy = "administrator", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<TasksBoard> tasksBoardsList;
 
 	public Administrator() {
 		super();
+	}
+
+	public List<Task> getTasksList() {
+		return tasksList;
+	}
+
+	public void setTasksList(List<Task> tasksList) {
+		this.tasksList = tasksList;
 	}
 
 	public String getUserName() {
@@ -48,24 +50,15 @@ public class Administrator {
 		this.userName = userName;
 	}
 
-//	public List<Task> getTasksList() {
-//		return tasksList;
-//	}
-//
-//
-//	public void setTasksList(List<Task> tasksList) {
-//		this.tasksList = tasksList;
-//	}
-//
-//
-//	public List<TasksBoard> getTaskBoardList() {
-//		return taskBoardList;
-//	}
-//
-//
-//	public void setTaskBoardList(List<TasksBoard> taskBoardList) {
-//		this.taskBoardList = taskBoardList;
-//	}
+
+
+	public List<TasksBoard> getTasksBoardsList() {
+		return tasksBoardsList;
+	}
+
+	public void setTasksBoardsList(List<TasksBoard> tasksBoardsList) {
+		this.tasksBoardsList = tasksBoardsList;
+	}
 
 	public long getAdminId() {
 		return adminId;

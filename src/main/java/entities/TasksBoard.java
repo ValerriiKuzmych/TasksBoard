@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -27,10 +29,10 @@ public class TasksBoard {
 	@JoinColumn(name = "admin_id")
 	private Administrator administrator;
 
-//	private List<User> usersList;
-//
-//
-	
+	@ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(name = "user_tasks_board", joinColumns = @JoinColumn(name = "tasks_board_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
+	private List<User> usersList;
+
 	@OneToMany(mappedBy = "tasksBoard", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Task> tasksList;
 
@@ -45,7 +47,6 @@ public class TasksBoard {
 	public void setTasksBoardId(long taskBoardId) {
 		this.tasksBoardId = taskBoardId;
 	}
-
 
 	public List<Task> getTasksList() {
 		return tasksList;

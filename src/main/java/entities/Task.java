@@ -18,9 +18,9 @@ public class Task {
 	@JoinColumn(name = "administrator_id")
 	private Administrator administrator;
 
-//	@ManyToOne
-//	@JoinColumn(name = "user_id")
-//	private User user;
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	private User user;
 
 	@ManyToOne
 	@JoinColumn(name = "tasks_board_id")
