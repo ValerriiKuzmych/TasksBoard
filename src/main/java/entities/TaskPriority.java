@@ -1,11 +1,22 @@
 package entities;
 
-
-
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+@Entity(name = "task_priorities")
 public class TaskPriority {
 	
-
-	private long taskId;
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;  
+	
+	
+	@OneToOne(mappedBy = "taskPriority", cascade = CascadeType.ALL)
+	private Task task;
+	
 	private boolean lowPriority;
 	private boolean mediumPriority;
 	private boolean highPriority;
@@ -18,13 +29,6 @@ public class TaskPriority {
 	}
 	
 	
-	
-	public long getTaskId() {
-		return taskId;
-	}
-	public void setTaskId(long taskId) {
-		this.taskId = taskId;
-	}
 	public boolean isLowPriority() {
 		return lowPriority;
 	}

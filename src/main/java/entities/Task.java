@@ -1,11 +1,13 @@
 package entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity(name = "tasks")
 public class Task {
@@ -26,6 +28,18 @@ public class Task {
 	@JoinColumn(name = "tasks_board_id")
 	private TasksBoard tasksBoard;
 
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "task_priority")
+	private TaskPriority taskPriority;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "task_status")
+	private TaskStatus taskStatus;
+
+	public Task() {
+		super();
+	}
+
 	public Administrator getAdministrator() {
 		return administrator;
 	}
@@ -42,14 +56,6 @@ public class Task {
 		this.tasksBoard = tasksBoard;
 	}
 
-	private String taskStatus;
-
-	private String taskPriority;
-
-	public Task() {
-		super();
-	}
-
 	public long getTaskId() {
 		return taskId;
 	}
@@ -58,20 +64,28 @@ public class Task {
 		this.taskId = taskId;
 	}
 
-	public String getTaskStatus() {
-		return taskStatus;
+	public User getUser() {
+		return user;
 	}
 
-	public void setTaskStatus(String taskStatus) {
-		this.taskStatus = taskStatus;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
-	public String getTaskPriority() {
+	public TaskPriority getTaskPriority() {
 		return taskPriority;
 	}
 
-	public void setTaskPriority(String taskPriority) {
+	public void setTaskPriority(TaskPriority taskPriority) {
 		this.taskPriority = taskPriority;
 	}
 
+	public TaskStatus getTaskStatus() {
+		return taskStatus;
+	}
+
+	public void setTaskStatus(TaskStatus taskStatus) {
+		this.taskStatus = taskStatus;
+	};
+	
 }
