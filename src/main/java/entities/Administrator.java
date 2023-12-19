@@ -19,7 +19,19 @@ public class Administrator {
 	private long adminId;
 	@Column(name = "admin_name")
 	private String userName;
-//	private List<Task> tasksList;
+	
+	
+
+	@OneToMany(mappedBy = "administrator", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<Task> tasksList;
+
+	public List<Task> getTasksList() {
+		return tasksList;
+	}
+
+	public void setTasksList(List<Task> tasksList) {
+		this.tasksList = tasksList;
+	}
 
 	@OneToMany(mappedBy = "administrator", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<TasksBoard> tasksBoardsList;
