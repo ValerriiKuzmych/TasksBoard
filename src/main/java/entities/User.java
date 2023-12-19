@@ -7,8 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity(name = "users")
 
@@ -21,9 +23,9 @@ public class User {
 	private String firstName;
 	private String lastName;
 
-//	@OneToOne(cascade = CascadeType.ALL)
-//	@JoinColumn(name = "options_delegation_id")
-//	private OptionsDelegation optionsDelegation;
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "options_delegation_id")
+	private OptionsDelegation optionsDelegation;
 
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Task> tasksList;
