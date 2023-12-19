@@ -1,5 +1,8 @@
 package entities;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity(name = "tasks_boards")
 public class TasksBoard {
@@ -26,7 +30,9 @@ public class TasksBoard {
 //	private List<User> usersList;
 //
 //
-//	private List<Task> tasksList;
+	
+	@OneToMany(mappedBy = "tasksBoard", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<Task> tasksList;
 
 	public TasksBoard() {
 		super();
@@ -40,22 +46,14 @@ public class TasksBoard {
 		this.tasksBoardId = taskBoardId;
 	}
 
-//	public List<User> getUsersList() {
-//		return usersList;
-//	}
-//
-//	public void setUsersList(List<User> usersList) {
-//		this.usersList = usersList;
-//	}
-//
-//	public List<Task> getTasksList() {
-//		return tasksList;
-//	}
-//
-//	public void setTasksList(List<Task> tasksList) {
-//		this.tasksList = tasksList;
-//	}
 
+	public List<Task> getTasksList() {
+		return tasksList;
+	}
+
+	public void setTasksList(List<Task> tasksList) {
+		this.tasksList = tasksList;
+	}
 
 	public String getTasksBoardName() {
 		return tasksBoardName;

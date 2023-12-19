@@ -18,15 +18,13 @@
 
 		<!-- Drop and re-create the database schema on startup -->
 		<property name="hibernate.hbm2ddl.auto">create-drop</property>
-
-		<!-- Mention annotated classes -->
-<!-- 		<mapping class="entities.User" />
-		<mapping class="entities.OptionsDelegation" />
-		<mapping class="entities.Task" /> -->
+<!-- 
+        	<mapping class="entities.User" />
+		<mapping class="entities.OptionsDelegation" /> -->
+		<mapping class="entities.Task" />
 		<mapping class="entities.TasksBoard" />
 		<mapping class="entities.Administrator" />
 
-		<!-- Other mappings... -->
 
 	</session-factory>
 </hibernate-configuration>

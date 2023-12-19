@@ -1,0 +1,119 @@
+[33mcommit 6aa94e845b9da6d2465b65a10ec2df56760b2b02[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Sat Dec 16 20:48:42 2023 +0100
+
+    update method update in all classes DAO
+
+[33mcommit 4bf2cac2480406f30e6712bf4574b914d4f874ec[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Sat Dec 16 20:35:42 2023 +0100
+
+    update class AdministratorDAO, realisation a method  update, update classes Administrator and TasksBoard
+
+[33mcommit b031a2c88de2d4853754760ea5047cb7d39f1d7e[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Wed Dec 13 20:23:09 2023 +0100
+
+    update classes Administrator and AdministratorDAO, update all etities
+
+[33mcommit 49b0c4581c569afcd871e7193fbb93b41ec30eb3[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Wed Dec 13 19:24:02 2023 +0100
+
+    Update class TasksBoardDAO
+
+[33mcommit f96aec7c51540b7895f16bf8e2c470fc7b7d4b74[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Tue Dec 12 21:41:09 2023 +0100
+
+    update classes Task and TaskBoard
+
+[33mcommit ed6a76338b41b2d2f9f82b88b470f764b6b5e27f[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Mon Dec 11 22:06:37 2023 +0100
+
+    Update classes User, TaskBoard
+
+[33mcommit db9fea55b44192be876d81d842905d1e2500017c[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Mon Dec 11 21:24:44 2023 +0100
+
+    update classes User, Task, Hibernate config
+
+[33mcommit 2392f366592e59cf6fa3ff41552db377a87e4612[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Sat Dec 9 21:28:27 2023 +0100
+
+    Update Class User, Class OptionsDelegation and hibernate config
+
+[33mcommit ca44452e73ad7f20c230a1f2ed6eae67f3a2857d[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Thu Dec 7 20:43:51 2023 +0100
+
+    realisation method finById
+
+[33mcommit 393c17216259c07182e1986dc6ce8115a6b988e7[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Wed Dec 6 22:59:22 2023 +0100
+
+    created class TransactionManager, update hibernate.cfg
+
+[33mcommit 448713a925362bdd8b78e541a9ab9ac7d673b483[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Tue Dec 5 21:30:27 2023 +0100
+
+    created class HibernateUtil
+
+[33mcommit 6f3f7c20a2d5b9b3e7017a783677bcafbcc097db[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Mon Dec 4 14:18:39 2023 +0100
+
+    Entitys updating, hibernate config xml creating
+
+[33mcommit cdc1083d3a37ce4360c8a42c6e86224db3fbb5fb[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Sun Dec 3 21:22:55 2023 +0100
+
+    interfacesDAO update
+
+[33mcommit 0b072534299e6f80699a5d89a782726f6390d896[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Sun Dec 3 20:34:40 2023 +0100
+
+    update pomFile dependency MySQLConnector 8.0.28
+
+[33mcommit b6f3b7267509aec2e419edc158ba3a00f87e450e[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Sun Dec 3 20:30:00 2023 +0100
+
+    creating InterfaceDAO and Classes
+
+[33mcommit a56ce4ba2c40ecc3d44699c8df98a74008fe82df[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Sun Dec 3 13:18:43 2023 +0100
+
+    creating entitys
+
+[33mcommit a0dd650d0a764ca86ccf8ad954112337a627df0f[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Sat Dec 2 23:29:15 2023 +0100
+
+    creating entitys
+
+[33mcommit 8a5ea80e56ea5875814625523bf34b9e882ec620[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Sat Dec 2 23:11:50 2023 +0100
+
+    update pom
+
+[33mcommit b371c081e6aa6bd7dafd495b1ade7787d0bfc79c[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Thu Nov 30 21:20:12 2023 +0100
+
+    first commit 01
+
+[33mcommit 287e02cfcf2cb569dd04d39c8258fd8ee295d34c[m
+Author: Valerii Kuzmych <kuzmychvalerii@gmail.com>
+Date:   Thu Nov 30 21:18:05 2023 +0100
+
+    first commit

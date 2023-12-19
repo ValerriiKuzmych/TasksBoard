@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Version;
 
 
 @Entity
@@ -18,21 +19,30 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long taskId;
 	
+//	 @ManyToOne
+//	 @JoinColumn(name = "user_id")
+//	 private User user;
+	 
 	 @ManyToOne
-	 @JoinColumn(name = "user_id")
-	 private User user;
-	 
-	 
+	 @JoinColumn(name = "tasks_board_id")
 	 private TasksBoard tasksBoard;
 	 
 	 
-//	private long taskBoardId;
-//
 //    private long adminId;
 	
+	public TasksBoard getTasksBoard() {
+		return tasksBoard;
+	}
+
+	public void setTasksBoard(TasksBoard tasksBoard) {
+		this.tasksBoard = tasksBoard;
+	}
+
 	private String taskStatus;
 	
 	private String taskPriority;
+	
+	
 	
 	
 	
@@ -40,16 +50,16 @@ public class Task {
 	public Task() {
 		super();
 	}
-	
-	public User getUser() {
-		return user;
-	}
-
-
-
-	public void setUser(User user) {
-		this.user = user;
-	}
+//	
+//	public User getUser() {
+//		return user;
+//	}
+//
+//
+//
+//	public void setUser(User user) {
+//		this.user = user;
+//	}
 
 	public long getTaskId() {
 		return taskId;
@@ -77,14 +87,6 @@ public class Task {
 		this.taskPriority = taskPriority;
 	}
 
-	public TasksBoard getTaskBoard() {
-		return tasksBoard;
-	}
-
-	public void setTaskBoard(TasksBoard tasksBoard) {
-		this.tasksBoard = tasksBoard;
-	}
-	
 	
 	
 	
