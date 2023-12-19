@@ -19,13 +19,9 @@ public class Administrator {
 	private long adminId;
 	@Column(name = "admin_name")
 	private String userName;
-	
-	
 
 	@OneToMany(mappedBy = "administrator", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Task> tasksList;
-
-	
 
 	@OneToMany(mappedBy = "administrator", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<TasksBoard> tasksBoardsList;
@@ -49,8 +45,6 @@ public class Administrator {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-
-
 
 	public List<TasksBoard> getTasksBoardsList() {
 		return tasksBoardsList;

@@ -2,9 +2,8 @@ package entities;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 
 
@@ -12,10 +11,10 @@ import javax.persistence.OneToOne;
 public class TaskStatus {
 	
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;  
 	
 	@OneToOne(mappedBy = "taskStatus", cascade = CascadeType.ALL)
+	@MapsId
 	private Task task;
 
 	private boolean newTask;

@@ -66,7 +66,6 @@ public class User {
 		return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + "]";
 	}
 
-
 	public List<Task> getTasksList() {
 		return tasksList;
 	}
@@ -76,12 +75,11 @@ public class User {
 	}
 
 	public List<TasksBoard> getTasksBoardsList() {
-        return tasksBoardsList;
-    }
+		return tasksBoardsList;
+	}
 
-    public void setTasksBoardsList(List<TasksBoard> tasksBoardsList) {
-        this.tasksBoardsList = tasksBoardsList;
-    }
-    
+	public void setTasksBoardsList(List<TasksBoard> tasksBoardsList) {
+		this.tasksBoardsList = tasksBoardsList;
+	}
 
 }

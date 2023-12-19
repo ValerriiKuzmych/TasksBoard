@@ -62,8 +62,7 @@ public class Main {
 		tasksList1.add(task1);
 		tasksList1.add(task2);
 		tasksList1.add(task3);
-		
-		
+
 		admin1.setTasksList(tasksList1);
 
 		task1.setAdministrator(admin1);

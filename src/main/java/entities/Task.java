@@ -14,7 +14,7 @@ public class Task {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long taskId;
+	private long id;
 
 	@ManyToOne
 	@JoinColumn(name = "administrator_id")
@@ -56,13 +56,6 @@ public class Task {
 		this.tasksBoard = tasksBoard;
 	}
 
-	public long getTaskId() {
-		return taskId;
-	}
-
-	public void setTaskId(long taskId) {
-		this.taskId = taskId;
-	}
 
 	public User getUser() {
 		return user;
@@ -87,5 +80,5 @@ public class Task {
 	public void setTaskStatus(TaskStatus taskStatus) {
 		this.taskStatus = taskStatus;
 	};
-	
+
 }
