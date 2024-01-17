@@ -35,6 +35,8 @@ public class Task {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "task_status")
 	private TaskStatus taskStatus;
+	
+	private String taskDescription;
 
 	public Task() {
 		super();
@@ -79,6 +81,14 @@ public class Task {
 
 	public void setTaskStatus(TaskStatus taskStatus) {
 		this.taskStatus = taskStatus;
+	}
+
+	public String getTaskDescription() {
+		return taskDescription;
+	}
+
+	public void setTaskDescription(String taskDescription) {
+		this.taskDescription = taskDescription;
 	};
 
 }
