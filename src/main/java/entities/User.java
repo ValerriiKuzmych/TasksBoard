@@ -37,6 +37,14 @@ public class User {
 
 	}
 
+	public OptionsDelegation getOptionsDelegation() {
+		return optionsDelegation;
+	}
+
+	public void setOptionsDelegation(OptionsDelegation optionsDelegation) {
+		this.optionsDelegation = optionsDelegation;
+	}
+
 	public long getUserId() {
 		return userId;
 	}
