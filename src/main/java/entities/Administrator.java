@@ -21,7 +21,7 @@ public class Administrator {
 	private long adminId;
 	@Column(name = "admin_name")
 	private String userName;
-	
+
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "general_panel_id")
 	private GeneralPanel generalPanel;
@@ -34,6 +34,14 @@ public class Administrator {
 
 	public Administrator() {
 		super();
+	}
+
+	public GeneralPanel getGeneralPanel() {
+		return generalPanel;
+	}
+
+	public void setGeneralPanel(GeneralPanel generalPanel) {
+		this.generalPanel = generalPanel;
 	}
 
 	public List<Task> getTasksList() {
