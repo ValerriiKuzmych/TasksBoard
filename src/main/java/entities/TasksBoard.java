@@ -28,6 +28,10 @@ public class TasksBoard {
 	@ManyToOne
 	@JoinColumn(name = "admin_id")
 	private Administrator administrator;
+	
+	@ManyToOne
+	@JoinColumn(name = "general_panel_id")
+	private GeneralPanel generalPanel;
 
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "user_tasks_board", joinColumns = @JoinColumn(name = "tasks_board_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))

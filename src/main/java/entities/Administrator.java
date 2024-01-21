@@ -8,7 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity(name = "administrators")
 public class Administrator {
@@ -19,6 +21,10 @@ public class Administrator {
 	private long adminId;
 	@Column(name = "admin_name")
 	private String userName;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "general_panel_id")
+	private GeneralPanel generalPanel;
 
 	@OneToMany(mappedBy = "administrator", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Task> tasksList;

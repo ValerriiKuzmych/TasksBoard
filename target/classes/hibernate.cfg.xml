@@ -26,7 +26,7 @@
 		<mapping class="entities.Task" />
 		<mapping class="entities.TasksBoard" />
 		<mapping class="entities.Administrator" />
-
+        <mapping class="entities.GeneralPanel" />
 
 	</session-factory>
 </hibernate-configuration>
